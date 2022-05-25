@@ -25,7 +25,7 @@ The reaction data consists of four columns:
 
 **Task**: The similarity score between two users is the number of jobs which they both like. Find the two users with the highest similarity.
 
-**Answer**: _[Enter the two user IDs & their similarity score here]_
+**Answer**: _[1791 (user id), 5193 (user id) & 301 (score)]_
 
 ### Task 2
 
@@ -33,7 +33,7 @@ In the `data` folder there is an additional CSV file called `jobs.csv`. It conta
 
 **Task**: The similarity score between two companies is the number of users who like at least one job at both companies. Using both the `reactions.csv` and `jobs.csv` data, find the two companies with the highest similarity score.
 
-**Answer**: _[Enter the two company IDs & their similarity score here]_
+**Answer**: _[92 (company id), 46(company id) & 104 (score)]_
 
 ### Task 3
 
@@ -47,11 +47,14 @@ We don't think it's fair to ask you to build something with a UI, as we know thi
 - If the best example of your work is something you've done at a company, it's okay to link to a live deployed version
 - If you can't link to anything, a screenshot is also fine
 
-**Answer**: _[Add a link to repo/website/screenshot here]_
+**Answer**: The following screenshots are of two features I have built at Eebz. The first task was to add a "localised value" field as part of an 'Attributes' (such as Product attributes) form whereby the value of each attribute within the parent attribute may have a localised value. The second task was to create a generic popup component to show a list of values (names) and make it searchable by text while also being capable of arrow key input. 
+![Complex reactive code structure](eebz.jpg) ![Interesting design process, searchable dropdown](eebz_2.jpg)
 
 **Task**: Tell us about the biggest challenge you faced in building the above.
 
-**Answer**: _[Write your answer here (300 words max)]_
+**Answer**:  The biggest challenge of the first task was to find the most optimal way to perform state validation on each individual localised value as there is a validation requirement stating that the string value must be in the format X:Y, Z:A as shown in the above image. Making this state-reactive as well as affect the individual row was complex, since even though we were able to create validation through the use of Array.map and Array.filter functions, new localised values could not be saved as the values passed through needed to be converted into an object for the PostgreSQL table. I solved this by using JavaScript Array.map and Array.reduce functions after splitting inputted string using the punctuation in the string.
+
+The biggest challenge of the second task was to implement a popup component with functionality that enabled it to be searchable in a variety of ways. The main way to search is via text input, but in addition to that, there was a requirement to allow the user to be able to utilise the keyboard so that they can traverse through the resulting list using arrow keys and be able to select and save a value using the enter key. This was achieved by setting an ID to every result value based on the index of the array. A user would be able to traverse the array with their arrow keys and the UI would focus on the current element based on the resulting index. 
 
 ## Submission
 
