@@ -25,7 +25,7 @@ The reaction data consists of four columns:
 
 **Task**: The similarity score between two users is the number of jobs which they both like. Find the two users with the highest similarity.
 
-**Answer**: _[1791 (user id), 5193 (user id) & 301 (score)]_
+**Answer**: _[1791 (user id), 5193 (user id) & 181 (score)]_
 
 ### Task 2
 
